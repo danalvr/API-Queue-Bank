@@ -37,17 +37,17 @@ class DatabaseSeeder extends Seeder
         for($i=1; $i<=10; $i++){
             QueueNumber::factory()->create([
                 'code_number' => 'A00'.$i,
-                'status' => 0,
+                'status' => null,
                 'queue_type_id' => 1,
             ]);
             QueueNumber::factory()->create([
                 'code_number' => 'B00'.$i,
-                'status' => 0,
+                'status' => null,
                 'queue_type_id' => 2,
             ]);
             QueueNumber::factory()->create([
                 'code_number' => 'C00'.$i,
-                'status' => 0,
+                'status' => null,
                 'queue_type_id' => 3,
             ]);
         }

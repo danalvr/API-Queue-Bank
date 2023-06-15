@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('queue_numbers', function (Blueprint $table) {
             $table->id();
             $table->string('code_number');
-            $table->boolean('status');
+            $table->boolean('status')->nullable();
             $table->foreignId('queue_type_id');
             $table->timestamps();
 

@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class QueueNumberResource extends JsonResource
+class QueueNumberDetailResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -18,6 +18,8 @@ class QueueNumberResource extends JsonResource
             'id' => $this->id,
             'code_number' => $this->code_number,
             'status' => $this->status,
+            'queue_type_id' => $this->queue_type_id,
+            'created_at' => $this->created_at,
         ];
     }
 }
