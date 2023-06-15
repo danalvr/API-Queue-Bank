@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('queue_types', function (Blueprint $table) {
             $table->id();
             $table->string('type_name');
+            $table->string('uniq_code');
             $table->timestamps();
         });
     }

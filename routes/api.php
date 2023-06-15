@@ -17,3 +17,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/queue-bank', [QueueNumberController::class, 'index']);
 Route::get('/queue-bank/{id}', [QueueNumberController::class, 'show']);
+// Route::post('/queue-bank', [QueueNumberController::class, 'store']);
+Route::post('/queue-bank/type/{queueTypeId}', [QueueNumberController::class, 'store']);

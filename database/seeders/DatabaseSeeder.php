@@ -25,13 +25,16 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         QueueType::factory()->create([
-            'type_name' => 'A'
+            'type_name' => 'Teller A',
+            'uniq_code' => 'A00'
         ]);
         QueueType::factory()->create([
-            'type_name' => 'B'
+            'type_name' => 'Teller B',
+            'uniq_code' => 'B00',
         ]);
         QueueType::factory()->create([
-            'type_name' => 'C'
+            'type_name' => 'Teller C',
+            'uniq_code' => 'C00',
         ]);
 
         for($i=1; $i<=10; $i++){
