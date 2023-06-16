@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\QueueTypeController;
 use App\Http\Controllers\QueueNumberController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -22,3 +23,7 @@ Route::get('/queue-bank/type/{queueTypeId}', [QueueNumberController::class, 'fil
 Route::post('/queue-bank/type/{queueTypeId}', [QueueNumberController::class, 'store']);
 Route::patch('/queue-bank/{id}/detail', [QueueNumberController::class, 'update']);
 Route::delete('/queue-bank/type/{queueTypeId}', [QueueNumberController::class, 'destroy']);
+
+// Queue Type
+Route::get('/queue-bank/type', [QueueTypeController::class, 'index']);
+Route::post('/queue-bank/create', [QueueTypeController::class, 'store']);
