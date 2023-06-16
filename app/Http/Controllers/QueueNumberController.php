@@ -61,4 +61,13 @@ class QueueNumberController extends Controller
 
         return response()->json(['message' => $message]);
     }
+
+    public function filterByType(Request $request){
+        $query = DB::table('queue_types')
+                    ->join('queue_numbers', 'queue_types.id', '=', 'queue_numbers.queue_type_id')
+                    ->where('queue_types.id', $request->queueTypeId)
+                    ->get();
+        
+        return response()->json($query);
+    }
 }

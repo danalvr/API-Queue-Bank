@@ -15,8 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Queue Number
 Route::get('/queue-bank', [QueueNumberController::class, 'index']);
 Route::get('/queue-bank/{id}/detail', [QueueNumberController::class, 'show']);
+Route::get('/queue-bank/type/{queueTypeId}', [QueueNumberController::class, 'filterByType']);
 Route::post('/queue-bank/type/{queueTypeId}', [QueueNumberController::class, 'store']);
 Route::patch('/queue-bank/{id}/detail', [QueueNumberController::class, 'update']);
 Route::delete('/queue-bank/type/{queueTypeId}', [QueueNumberController::class, 'destroy']);
