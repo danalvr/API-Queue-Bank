@@ -5,9 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Resources\QueueNumberDetailResource;
 use App\Http\Resources\QueueNumberResource;
 use App\Models\QueueNumber;
-use App\Models\QueueType;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Queue;
 use Illuminate\Support\Facades\DB;
 
 class QueueNumberController extends Controller

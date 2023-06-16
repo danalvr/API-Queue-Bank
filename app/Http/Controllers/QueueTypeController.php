@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Resources\QueueNumberResource;
 use App\Http\Resources\QueueTypeResource;
 use App\Models\QueueType;
 use Illuminate\Http\Request;
