@@ -39,4 +39,26 @@ class QueueNumberController extends Controller
 
         return new QueueNumberDetailResource($createdData);
     }
+
+    public function update(Request $request, $id){
+        $validated = $request->validate([
+            'status' => 'required'
+        ]);
+
+        $data = QueueNumber::findOrFail($id);
+
+        $data->update($validated);
+
+        return new QueueNumberDetailResource($data);
+    }
+
+    public function destroy($queueTypeId){
+        $data = DB::table('queue_numbers')
+                    ->where('queue_type_id', $queueTypeId)
+                    ->delete();
+
+        $message = 'Data berhasil dihapus!';
+
+        return response()->json(['message' => $message]);
+    }
 }
