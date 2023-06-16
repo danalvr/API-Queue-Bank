@@ -27,3 +27,5 @@ Route::delete('/queue-bank/type/{queueTypeId}', [QueueNumberController::class, '
 // Queue Type
 Route::get('/queue-bank/type', [QueueTypeController::class, 'index']);
 Route::post('/queue-bank/create', [QueueTypeController::class, 'store']);
+Route::patch('/queue-bank/type/{id}/detail', [QueueTypeController::class, 'update']);
+Route::delete('/queue-bank/type/{id}/delete', [QueueTypeController::class, 'destroy']);
